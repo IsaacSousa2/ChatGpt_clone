@@ -8,6 +8,18 @@ export default function Page() {
   const [sidebarOpened, setSidebarOpened] = useState(true)
 
   const closeSidebar = () => {
+    setSidebarOpened(false)
+  }
+
+  const handleClearConversations = () => {
+
+    
+
+  }
+
+  const handeleNewChat = () => {
+
+    
 
   }
 
@@ -18,12 +30,15 @@ export default function Page() {
         <Sidebar 
         open = {sidebarOpened}
         onClose = {closeSidebar}
+        onClear={handleClearConversations}
+        onNewChat={handeleNewChat}
         >
-            <h1>teste</h1>
+            <div  className="">...</div>
+            
         </Sidebar>
 
         <section className="flex flex-col w-full">
-          ...
+          <button onClick={() => setSidebarOpened(true)}>Abrir Sidebar</button>
         </section>
 
     </main>
