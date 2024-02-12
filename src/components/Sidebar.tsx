@@ -26,8 +26,8 @@ export const Sidebar = ({ open, onClose, onNewChat, onClear, children }: Props) 
 
                     <div onClick={onNewChat} className="flex items-center p-3 rounded-md text-sm cursor-pointer border border-white/20 hover:bg-gray-500/20 hover:duration-200">
 
-                        <FaPlus width={16}height={16}/>
-                        <h2>Nova conversa</h2>
+                        <FaPlus width={16}height={16} />
+                        <h2 className="ml-0.5">Nova conversa</h2>
 
                     </div>
 

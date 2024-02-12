@@ -1,15 +1,31 @@
 'use client'
 
+import { ChatArea } from "@/components/ChatArea";
+import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
+import { Chat } from "@/types/Chat";
 import { useState } from "react";
 
 export default function Page() {
 
   const [sidebarOpened, setSidebarOpened] = useState(true)
+  const [chatActive, setchatActive] = useState<Chat>({
+    id: '123',
+    title: 'Titulo Aleatório',
+    messages: [
+      {
+        id: '99', author : 'me', body: 'Opa, Tudo bem?'  
+      },
+      {
+        id: '100', author : 'ai', body: 'Tudo show! Como posso te ajudar meu caro companheiro?'  
+      },
+    ]
+  })
 
-  const closeSidebar = () => {
-    setSidebarOpened(false)
-  }
+
+
+  const openSidebar = () => setSidebarOpened(true)
+  const closeSidebar = () => setSidebarOpened(false)
 
   const handleClearConversations = () => {
 
@@ -17,7 +33,7 @@ export default function Page() {
 
   }
 
-  const handeleNewChat = () => {
+  const handleNewChat = () => {
 
     
 
@@ -31,14 +47,22 @@ export default function Page() {
         open = {sidebarOpened}
         onClose = {closeSidebar}
         onClear={handleClearConversations}
-        onNewChat={handeleNewChat}
+        onNewChat={handleNewChat}
         >
             <div  className="">...</div>
             
         </Sidebar>
 
         <section className="flex flex-col w-full">
-          <button onClick={() => setSidebarOpened(true)}>Abrir Sidebar</button>
+           
+          <Header 
+            openSideBarClick={openSidebar}
+            title={``}
+            newChatClick={handleNewChat}
+          />
+
+          <ChatArea chat= {chatActive} />
+
         </section>
 
     </main>
