@@ -1,6 +1,7 @@
 'use client'
 
 import { ChatArea } from "@/components/ChatArea";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Sidebar } from "@/components/Sidebar";
 import { Chat } from "@/types/Chat";
@@ -23,7 +24,7 @@ export default function Page() {
   })
 
 
-
+  const [AILoading, setAILoading] = useState(false) 
   const openSidebar = () => setSidebarOpened(true)
   const closeSidebar = () => setSidebarOpened(false)
 
@@ -36,6 +37,12 @@ export default function Page() {
   const handleNewChat = () => {
 
     
+
+  }
+
+  const handleSendMessage = () => {
+
+
 
   }
 
@@ -62,6 +69,11 @@ export default function Page() {
           />
 
           <ChatArea chat= {chatActive} />
+
+          <Footer 
+            onSendMessage = { handleSendMessage }
+            disabled = { AILoading }
+          />
 
         </section>
 
