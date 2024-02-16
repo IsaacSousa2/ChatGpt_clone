@@ -1,14 +1,16 @@
 import { Chat } from "@/types/Chat"
 import { ChatPlaceholder } from "./ChatPlaceholder"
 import { ChatMessageItem } from "./ChatMessageItem"
+import { ChatMessageLoading } from "./ChatMessageLoading";
 
 type Props = {
 
-    chat: Chat | undefined
+    chat: Chat | undefined;
+    loading: boolean;
     
 }
 
-export const ChatArea = ({chat}: Props) => {
+export const ChatArea = ({chat, loading}: Props) => {
 
     return(
 
@@ -19,7 +21,10 @@ export const ChatArea = ({chat}: Props) => {
                 key={item.id}
                 item={item} />
             ))}
+
+            {loading && <ChatMessageLoading />}
         </section>
+        
 
     )
 

@@ -1,5 +1,5 @@
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
-import { LuSend } from "react-icons/lu";
+import { LuSend } from "react-icons/lu";//Seção Secundária
 
 type Props = {
 
@@ -34,7 +34,7 @@ export const ChatMessageInput = ({onSend, disabled} : Props) => {
 
     const handleSendMessage = () => {
 
-        if(disabled && text.trim() !== '') {
+        if(!disabled && text.trim() !== '') {
 
             onSend(text)
             setText('')

@@ -1,5 +1,6 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react"//Importando bioblioteca ReactNode do react
 
+//Declaração de Props
 type Props = {
 
     icon: ReactNode;
