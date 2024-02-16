@@ -17,10 +17,10 @@ const config: Config = {
         'gpt-gray' : '#343541',
         'gpt-lightgray' : '#40414f'
       },
-      keyframe: {
+      keyframes: {
         blink: {
-          '0%': { opacity: 0},
-          '100%': { opacity: 1},
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         }
       },
       animation: {

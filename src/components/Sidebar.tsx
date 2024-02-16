@@ -38,7 +38,7 @@ export const Sidebar = ({ open, onClose, onNewChat, onClear, children }: Props) 
                         {children}
                     </nav>
 
-                    <div className="border-t border-gray-700 pt-2">
+                    <div className="border-t border-gray-700 hover:bg-slate-600  rounded transition-all duration-300">
 
                         <SidebarButton 
                             icon={<FaRegTrashCan />}

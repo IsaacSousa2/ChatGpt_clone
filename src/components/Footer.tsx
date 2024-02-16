@@ -21,6 +21,7 @@ export const Footer = ({ onSendMessage, disabled } : Props) => {
                 />
                 <div className="pt-3 text-center text-xs text-gray-300">
                     Feito pelo único e talentoso Cicero Isaac para uso de portifólio.
+                    Even Dead, I'm The Hero
                 </div>
 
             </div>

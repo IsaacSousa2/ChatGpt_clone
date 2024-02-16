@@ -7,7 +7,7 @@ export const ChatPlaceholder = () => {
         <div className="pl-2">
 
             {/**/}
-            <h3 className="text-4xl font-bold text-center my-8 ">ZazacAI</h3>
+            <h3 className="text-4xl font-bold text-center my-8 ">E.D.I.T.H</h3>
 
             {/**/}
             <div className="flex flex-col md:flex-row gap-5 m-auto mb-8 md:max-w-4xl">

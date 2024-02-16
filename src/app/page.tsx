@@ -20,9 +20,35 @@ export default function Page() {
     setChatActive(chatList.find(item => item.id === chatActiveId));
   }, [chatActiveId, chatList])
 
+  useEffect(() => {
+
+    if(AILoading) getAIResponse()
+
+  }, [AILoading])
+
 
   const openSidebar = () => setSidebarOpened(true)
   const closeSidebar = () => setSidebarOpened(false)
+
+  const getAIResponse = () =>  {
+
+    setTimeout(() => {
+      let chatListClone = [...chatList];
+      let chatIndex = chatListClone.findIndex(item => item.id === chatActiveId);
+
+      if(chatIndex  > -1) {
+        chatListClone[chatIndex].messages.push({
+          id: uuidv4(),
+          author: 'ai',
+          body: 'Eu sou uma AI criada por um genio da programação e essa é minha resposta padrão! :)'
+        });
+      }
+      setChatList(chatListClone)
+      setAILoading(false)
+
+    }, 2000)
+
+  }
 
   const handleClearConversations = () => {
 
@@ -72,6 +98,18 @@ export default function Page() {
 
   }
 
+  const handleSelectChat = () => {
+
+  }
+
+  const handleDeleteChat = () => {
+    
+  }
+
+  const handleEditChat = () => {
+    
+  }
+
   return(
 
     <main className="flex min-h-screen bg-gpt-gray">
@@ -82,7 +120,16 @@ export default function Page() {
         onClear={handleClearConversations}
         onNewChat={handleNewChat}
         >
-            <div  className="">...</div>
+            {chatList.map(item => (
+              <SidebarChatButton 
+              key={item.id}
+              chatItem={item}
+              active={item.id === chatActiveId}
+              onClick={handleSelectChat}
+              onDelete={handleDeleteChat}
+              onEdit={handleEditChat}
+              />
+            ))}
             
         </Sidebar>
 
@@ -90,7 +137,7 @@ export default function Page() {
            
           <Header 
             openSideBarClick={openSidebar}
-            title={``}
+            title={chatActive ? chatActive.title : 'Nova conversa'}
             newChatClick={handleNewChat}
           />
 
