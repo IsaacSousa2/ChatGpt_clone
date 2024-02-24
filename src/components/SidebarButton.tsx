@@ -13,7 +13,7 @@ export const SidebarButton = ({icon, label, onClick}  : Props) => {
 
     return(
 
-        <div onClick={onClick} className="flex items-center rounded-md p-3 text-sm cursor-pointer hover:500/20">
+        <div onClick={onClick}  className="flex items-center rounded-md p-3 text-sm cursor-pointer hover:500/20">
 
             <div className="mr-3">
 

@@ -3,6 +3,7 @@
 import { ChatArea } from "@/components/ChatArea";//Importando o componente de área do chat
 import { Footer } from "@/components/Footer";//Importando o componente de rodapé
 import { Header } from "@/components/Header";//Importando o component de cabeçalho
+import { SideBarChatButton } from "@/components/SideBarChatButton";
 import { Sidebar } from "@/components/Sidebar"
 import { Chat } from "@/types/Chat";
 import { useEffect, useState } from "react";
@@ -98,16 +99,29 @@ export default function Page() {
 
   }
 
-  const handleSelectChat = () => {
+  const handleSelectChat = (id : string) => {
+    if(AILoading) return;
 
+    let item = chatList.find(item => item.id === id);
+    if (item) setChatActiveId(item.id);
+    closeSidebar();
   }
 
-  const handleDeleteChat = () => {
-    
+  const handleDeleteChat = (id : string) => {
+    let chatListClone = [...chatList]
+    let chatIndex = chatListClone.findIndex(item => item.id === id)
+    chatListClone.splice(chatIndex, 1)
+    setChatList(chatListClone)
+    setChatActiveId('');
   }
 
-  const handleEditChat = () => {
-    
+  const handleEditChat = (id: string, newTitle: string) => {
+    if(newTitle) {
+      let chatListClone = [...chatList]
+      let chatIndex = chatListClone.findIndex(item => item.id === id)
+      chatListClone[chatIndex].title = newTitle
+      setChatList(chatListClone)
+    }
   }
 
   return(
@@ -121,7 +135,7 @@ export default function Page() {
         onNewChat={handleNewChat}
         >
             {chatList.map(item => (
-              <SidebarChatButton 
+              <SideBarChatButton 
               key={item.id}
               chatItem={item}
               active={item.id === chatActiveId}

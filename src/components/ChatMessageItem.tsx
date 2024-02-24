@@ -17,7 +17,7 @@ export const ChatMessageItem = ({item} : Props) => {
             <div className="max-w-4xl m-auto flex">
 
                 <div className={`w-10 h-10 flex 
-                justify-center items-center mx-4 md:ml-0 rounded ${item.author === 'ai' ? 'bg-green-900' : 'bg-blue-900'}`}>
+                justify-center items-center mx-4 md:ml-0 rounded ${item.author === 'ai' ? 'bg-purple-600' : 'bg-blue-700'}`}>
 
                     {item.author === 'me' && <LuUser2 
                      width={24} height={24} />}

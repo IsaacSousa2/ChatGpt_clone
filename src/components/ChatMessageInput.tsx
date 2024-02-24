@@ -49,7 +49,7 @@ export const ChatMessageInput = ({onSend, disabled} : Props) => {
             
             <textarea
             ref={textEl}
-            className="flex-1 w-full bg-transparent resize-none outline-none h-6 max-h-48 overflow-y-auto" 
+            className="text-white flex-1 w-full bg-transparent resize-none outline-none h-6 max-h-48 overflow-y-auto" 
             placeholder="Digite uma mensagem" 
             value={text} 
             onChange={e => setText(e.target.value)} 
