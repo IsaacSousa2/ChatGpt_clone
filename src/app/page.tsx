@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 export default function Page() {
 
-  const [sidebarOpened, setSidebarOpened] = useState(true)
+  const [sidebarOpened, setSidebarOpened] = useState(false)
   const [chatList, setChatList] = useState<Chat[]>([])
   const [chatActiveId, setChatActiveId] = useState<string>('')
   const [chatActive, setChatActive] = useState<Chat>()

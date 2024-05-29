@@ -17,7 +17,7 @@ export const ChatPlaceholder = () => {
                     {/**/}
                     <div className="flex justify-center items-center text-lg mb-3">
                         <BsSun width={24} height={24} className="mr-3"/>
-                        Exemplo
+                        Clima...
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
@@ -25,11 +25,11 @@ export const ChatPlaceholder = () => {
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                         Que dia será o enem?
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Que time vencerá e NBA nessa temporada?
                     </div>
                 </div>
                 {/**/}
@@ -37,19 +37,19 @@ export const ChatPlaceholder = () => {
                     {/**/}
                     <div className="flex justify-center items-center text-lg mb-3">
                         <BsSun width={24} height={24} className="mr-3"/>
-                        Exemplo
+                        Organização...
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Crie uma rotina diária para mim, baseado em...
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Invente pra uma história para mim:
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Conte-me uma piada produtiva de jeito descontraído
                     </div>
                 </div>
                 {/**/}
@@ -57,7 +57,7 @@ export const ChatPlaceholder = () => {
                     {/**/}
                     <div className="flex justify-center items-center text-lg mb-3">
                         <BsSun width={24} height={24} className="mr-3"/>
-                        Exemplo
+                        Aulas...
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
@@ -65,11 +65,11 @@ export const ChatPlaceholder = () => {
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Explique o que são super condutores
                     </div>
                     {/**/}
                     <div className="bg-white/5 rounded text-sm text-center mb-3 p-3">
-                        Explique o sentido da vida em termos simples
+                        Qual é a melhor rotina de estudos para o enem
                     </div>
                     {/**/}
                 </div>
